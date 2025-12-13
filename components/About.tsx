@@ -6,42 +6,46 @@ const About = () => {
   return (
     <section id="about" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-center">
           {/* Left side - Content */}
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="w-full"
           >
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
               FAISAL • BUKHARI
             </h2>
             <p className="text-xl text-gray-300 font-semibold mb-8">
-              Full-Stack Developer specializing in modern web applications.
+              Full-Stack Developer specializing in modern web applications and
+              AI-powered solutions.
             </p>
 
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
                 Hello! I&apos;m Faisal Bukhari, a{" "}
                 <span className="text-mint-400">Full-Stack Developer</span> with
-                5+ years of experience building modern, scalable, and
+                6+ years of experience building modern, scalable, and
                 high-performance web applications. I specialize in React,
-                Next.js, Python FastAPI, and Node.js technologies.
+                Next.js, Python FastAPI, NestJS, and AI-powered solutions.
               </p>
               <p>
                 From sleek user interfaces to robust backend systems, I help
                 businesses transform ideas into reliable digital products. My
-                expertise spans
+                expertise spans{" "}
+                <span className="text-mint-400">frontend development</span> with
+                React/Next.js,{" "}
+                <span className="text-mint-400">backend systems</span> with
+                Python FastAPI and NestJS,{" "}
+                <span className="text-mint-400">AI/ML integration</span> with
+                LangChain and OpenAI,{" "}
                 <span className="text-mint-400">
-                  {" "}
-                  frontend development
-                </span>{" "}
-                with React/Next.js,
-                <span className="text-mint-400"> backend systems</span> with
-                Python FastAPI and Node.js, and{" "}
-                <span className="text-mint-400"> cloud integration</span> with
-                modern deployment practices.
+                  microservices architecture
+                </span>
+                , and <span className="text-mint-400">cloud integration</span>{" "}
+                with modern deployment practices.
               </p>
             </div>
 
@@ -57,13 +61,13 @@ const About = () => {
                 <h4 className="text-mint-400 text-sm font-semibold uppercase tracking-wider mb-2">
                   EXPERIENCE
                 </h4>
-                <p className="text-white">5+ Years Full-Stack</p>
+                <p className="text-white">6+ Years Full-Stack</p>
               </div>
               <div>
                 <h4 className="text-mint-400 text-sm font-semibold uppercase tracking-wider mb-2">
                   SPECIALIZATION
                 </h4>
-                <p className="text-white">React, Next.js, FastAPI</p>
+                <p className="text-white">React, Next.js, FastAPI, AI/ML</p>
               </div>
             </div>
           </motion.div>
@@ -74,7 +78,7 @@ const About = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="relative flex justify-center lg:justify-end"
+            className="relative flex justify-center lg:justify-end w-full lg:w-auto mt-8 lg:mt-0"
           >
             <div className="relative w-80 h-80 lg:w-96 lg:h-96">
               <Image
@@ -97,7 +101,7 @@ const About = () => {
           className="grid md:grid-cols-3 gap-8 mt-20"
         >
           {[
-            { number: "5+", label: "YEARS OF EXPERIENCE" },
+            { number: "6+", label: "YEARS OF EXPERIENCE" },
             { number: "50+", label: "PROJECTS COMPLETED" },
             { number: "30+", label: "HAPPY CLIENTS" },
           ].map((stat, index) => (
