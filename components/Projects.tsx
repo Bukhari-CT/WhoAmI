@@ -1,10 +1,4 @@
-import {
-  cafezupas,
-  amazonImg,
-  viralSolutions,
-  urgentcare,
-  noorShop,
-} from "@/public/assets";
+import { cafezupas, urgentcare } from "@/public/assets";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -195,6 +189,7 @@ const Projects = () => {
                   src={project.image}
                   alt={project.title}
                   fill
+                  loading="lazy"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
