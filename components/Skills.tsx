@@ -5,13 +5,6 @@ import {
   FaPython,
   FaDocker,
   FaAws,
-  FaJs,
-  FaHtml5,
-  FaCss3Alt,
-  FaGitAlt,
-  FaDatabase,
-  FaCloud,
-  FaCode,
   FaBrain,
 } from "react-icons/fa";
 import {
@@ -19,14 +12,8 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiFastapi,
-  SiNestjs,
   SiPostgresql,
-  SiMongodb,
-  SiRedis,
-  SiPrisma,
-  SiSupabase,
   SiGooglecloud,
-  SiFramer,
 } from "react-icons/si";
 
 const Skills = () => {
