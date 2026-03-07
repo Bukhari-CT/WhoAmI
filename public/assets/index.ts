@@ -6,6 +6,7 @@ import noorShop from "./images/noorShop.png";
 import cafezupas from "./images/cafezupas.png";
 import viralSolutions from "./images/viralsolutions.png";
 import urgentcare from "./images/urgentcare.png";
+import estatable from "./images/estatable.png";
 
 export {
   logo,
@@ -16,4 +17,5 @@ export {
   cafezupas,
   viralSolutions,
   urgentcare,
+  estatable,
 };

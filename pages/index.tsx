@@ -1,6 +1,5 @@
 import About from "@/components/About";
 import Banner from "@/components/Banner";
-import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
@@ -48,12 +47,11 @@ export default function Home() {
           <div className="w-full">
             <Banner />
             <About />
-            <Skills />
-            <Certifications />
-            <Experience />
-            <Services />
             <Projects />
             <Archive />
+            <Services />
+            <Experience />
+            <Skills />
             <Meeting />
             <Contact />
             <Footer />

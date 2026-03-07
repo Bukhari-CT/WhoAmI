@@ -12,6 +12,7 @@ import {
   FaDatabase,
   FaCloud,
   FaCode,
+  FaBrain,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -30,36 +31,24 @@ import {
 
 const Skills = () => {
   const frontendSkills = [
-    { name: "React", icon: FaReact, level: 95 },
-    { name: "Next.js", icon: SiNextdotjs, level: 90 },
-    { name: "TypeScript", icon: SiTypescript, level: 88 },
-    { name: "JavaScript", icon: FaJs, level: 92 },
-    { name: "Tailwind CSS", icon: SiTailwindcss, level: 90 },
-    { name: "HTML5", icon: FaHtml5, level: 95 },
-    { name: "CSS3", icon: FaCss3Alt, level: 90 },
-    { name: "Framer Motion", icon: SiFramer, level: 85 },
+    { name: "React", icon: FaReact },
+    { name: "Next.js", icon: SiNextdotjs },
+    { name: "TypeScript", icon: SiTypescript },
+    { name: "Tailwind CSS", icon: SiTailwindcss },
   ];
 
   const backendSkills = [
-    { name: "Python", icon: FaPython, level: 90 },
-    { name: "FastAPI", icon: SiFastapi, level: 88 },
-    { name: "Node.js", icon: FaNodeJs, level: 85 },
-    { name: "NestJS", icon: SiNestjs, level: 82 },
-    { name: "PostgreSQL", icon: SiPostgresql, level: 85 },
-    { name: "MongoDB", icon: SiMongodb, level: 80 },
-    { name: "Redis", icon: SiRedis, level: 75 },
-    { name: "Prisma", icon: SiPrisma, level: 80 },
+    { name: "Python", icon: FaPython },
+    { name: "FastAPI", icon: SiFastapi },
+    { name: "Node.js", icon: FaNodeJs },
+    { name: "PostgreSQL", icon: SiPostgresql },
   ];
 
-  const toolsSkills = [
-    { name: "Docker", icon: FaDocker, level: 85 },
-    { name: "Git", icon: FaGitAlt, level: 90 },
-    { name: "Supabase", icon: SiSupabase, level: 80 },
-    { name: "Google Cloud", icon: SiGooglecloud, level: 75 },
-    { name: "AWS", icon: FaAws, level: 70 },
-    { name: "Database Design", icon: FaDatabase, level: 85 },
-    { name: "API Development", icon: FaCode, level: 90 },
-    { name: "Cloud Storage", icon: FaCloud, level: 80 },
+  const cloudAiSkills = [
+    { name: "LLM Embeddings", icon: FaBrain },
+    { name: "Docker", icon: FaDocker },
+    { name: "AWS", icon: FaAws },
+    { name: "Google Cloud", icon: SiGooglecloud },
   ];
 
   const SkillCategory = ({
@@ -81,46 +70,23 @@ const Skills = () => {
       <h3 className="text-2xl font-bold text-white mb-6 text-center">
         {title}
       </h3>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="flex flex-wrap justify-center gap-4">
         {skills.map((skill, index) => (
           <motion.div
             key={skill.name}
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.4, delay: delay + index * 0.1 }}
+            transition={{ duration: 0.4, delay: delay + index * 0.05 }}
             viewport={{ once: true }}
-            className="card text-center group cursor-pointer"
+            className="flex items-center gap-3 px-6 py-3 bg-gray-800/50 hover:bg-gray-700/60 border border-gray-700 rounded-full text-white cursor-pointer transition-colors backdrop-blur-sm"
             whileHover={{
               scale: 1.05,
               y: -5,
             }}
             whileTap={{ scale: 0.95 }}
           >
-            <div className="flex flex-col items-center p-4">
-              <motion.div
-                className="text-3xl text-mint-400 mb-3"
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 360,
-                }}
-                transition={{ duration: 0.3 }}
-              >
-                <skill.icon />
-              </motion.div>
-              <h4 className="text-white font-semibold mb-2 text-sm">
-                {skill.name}
-              </h4>
-              <div className="w-full bg-gray-700 rounded-full h-2">
-                <motion.div
-                  className="bg-yellow h-2 rounded-full"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${skill.level}%` }}
-                  transition={{ duration: 1, delay: delay + index * 0.1 + 0.3 }}
-                  viewport={{ once: true }}
-                />
-              </div>
-              <span className="text-gray-400 text-xs mt-1">{skill.level}%</span>
-            </div>
+            <skill.icon className="text-xl text-mint-400" />
+            <span className="font-medium text-sm">{skill.name}</span>
           </motion.div>
         ))}
       </div>
@@ -142,7 +108,7 @@ const Skills = () => {
           </h2>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
             A comprehensive overview of my technical expertise across frontend,
-            backend, and development tools
+            backend, and cloud & AI technologies.
           </p>
         </motion.div>
 
@@ -159,8 +125,8 @@ const Skills = () => {
         />
 
         <SkillCategory
-          title="Tools & Technologies"
-          skills={toolsSkills}
+          title="Cloud & AI"
+          skills={cloudAiSkills}
           delay={0.6}
         />
       </div>

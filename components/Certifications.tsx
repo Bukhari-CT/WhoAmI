@@ -26,30 +26,6 @@ const Certifications = () => {
       color: "from-green-500 to-green-600",
       badgeColor: "bg-green-500",
     },
-    {
-      id: 3,
-      title: "React Assessment",
-      issuer: "LinkedIn",
-      type: "assessment",
-      icon: FaTrophy,
-      description: "Top 5% performance in React skills assessment",
-      date: "2024",
-      color: "from-purple-500 to-purple-600",
-      badgeColor: "bg-purple-500",
-      highlight: "Top 5%",
-    },
-    {
-      id: 4,
-      title: "WordPress Assessment",
-      issuer: "LinkedIn",
-      type: "assessment",
-      icon: FaTrophy,
-      description: "Top 5% performance in WordPress skills assessment",
-      date: "2024",
-      color: "from-orange-500 to-orange-600",
-      badgeColor: "bg-orange-500",
-      highlight: "Top 5%",
-    },
   ];
 
   return (
@@ -92,11 +68,6 @@ const Certifications = () => {
                   >
                     <cert.icon className="text-white text-xl" />
                   </div>
-                  {cert.highlight && (
-                    <span className="bg-mint-400 text-black px-3 py-1 rounded-full text-xs font-bold">
-                      {cert.highlight}
-                    </span>
-                  )}
                 </div>
 
                 {/* Content */}
@@ -137,13 +108,12 @@ const Certifications = () => {
           ))}
         </div>
 
-        {/* Stats Section */}
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="mt-16 grid grid-cols-2 gap-6 max-w-2xl mx-auto"
         >
           <div className="text-center">
             <div className="text-3xl font-bold text-mint-400 mb-2">2</div>
@@ -153,14 +123,6 @@ const Certifications = () => {
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-mint-400 mb-2">2</div>
-            <div className="text-gray-400 text-sm">LinkedIn Assessments</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-mint-400 mb-2">Top 5%</div>
-            <div className="text-gray-400 text-sm">LinkedIn Performance</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-mint-400 mb-2">4</div>
             <div className="text-gray-400 text-sm">Total Achievements</div>
           </div>
         </motion.div>
