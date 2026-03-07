@@ -85,6 +85,7 @@ const About = () => {
                 src={profileImg}
                 alt="Faisal Bukhari"
                 fill
+                loading="lazy"
                 className="object-cover rounded-full border-4 border-yellow"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-full"></div>
