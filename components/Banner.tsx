@@ -7,8 +7,8 @@ const Banner = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
+        staggerChildren: 0.08,
+        delayChildren: 0.1,
       },
     },
   };
@@ -19,19 +19,8 @@ const Banner = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
         ease: [0.25, 0.46, 0.45, 0.94],
-      },
-    },
-  };
-
-  const floatingVariants = {
-    animate: {
-      y: [-5, 5, -5],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut",
       },
     },
   };
@@ -86,7 +75,7 @@ const Banner = () => {
           <motion.div
             className="absolute top-20 left-0 text-gray-500/10 text-6xl font-bold whitespace-nowrap"
             animate={{ x: ["-100vw", "100vw"] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
           >
             REACT • NEXT.JS • TYPESCRIPT • JAVASCRIPT • TAILWIND CSS • HTML5 •
             CSS3 • FRAMER MOTION
@@ -97,10 +86,9 @@ const Banner = () => {
             className="absolute top-40 right-0 text-gray-500/10 text-5xl font-bold whitespace-nowrap"
             animate={{ x: ["100vw", "-100vw"] }}
             transition={{
-              duration: 25,
+              duration: 10,
               repeat: Infinity,
               ease: "linear",
-              delay: 2,
             }}
           >
             PYTHON • FASTAPI • NODE.JS • NESTJS • POSTGRESQL • MONGODB • REDIS •
@@ -112,10 +100,9 @@ const Banner = () => {
             className="absolute top-60 left-0 text-gray-500/10 text-4xl font-bold whitespace-nowrap"
             animate={{ x: ["-100vw", "100vw"] }}
             transition={{
-              duration: 30,
+              duration: 10,
               repeat: Infinity,
               ease: "linear",
-              delay: 5,
             }}
           >
             DOCKER • GIT • SUPABASE • GOOGLE CLOUD • AWS • DATABASE DESIGN • API
@@ -127,64 +114,13 @@ const Banner = () => {
             className="absolute bottom-40 right-0 text-gray-500/10 text-5xl font-bold whitespace-nowrap"
             animate={{ x: ["100vw", "-100vw"] }}
             transition={{
-              duration: 22,
+              duration: 10,
               repeat: Infinity,
               ease: "linear",
-              delay: 8,
             }}
           >
             FULL-STACK • FRONTEND • BACKEND • MICROSERVICES • CLOUD INTEGRATION
             • PERFORMANCE OPTIMIZATION
-          </motion.div>
-
-          {/* Vertical Text - Moving Down */}
-          <motion.div
-            className="absolute right-10 top-0 text-gray-500/10 text-3xl font-bold"
-            animate={{ y: ["-100vh", "100vh"] }}
-            transition={{
-              duration: 35,
-              repeat: Infinity,
-              ease: "linear",
-              delay: 3,
-            }}
-          >
-            <div className="flex flex-col space-y-8">
-              <span>REACT</span>
-              <span>NEXT.JS</span>
-              <span>PYTHON</span>
-              <span>FASTAPI</span>
-              <span>NODE.JS</span>
-              <span>DOCKER</span>
-              <span>POSTGRESQL</span>
-              <span>MONGODB</span>
-              <span>REDIS</span>
-              <span>SUPABASE</span>
-            </div>
-          </motion.div>
-
-          {/* Vertical Text - Moving Up */}
-          <motion.div
-            className="absolute left-10 bottom-0 text-gray-500/10 text-3xl font-bold"
-            animate={{ y: ["100vh", "-100vh"] }}
-            transition={{
-              duration: 40,
-              repeat: Infinity,
-              ease: "linear",
-              delay: 10,
-            }}
-          >
-            <div className="flex flex-col space-y-8">
-              <span>TYPESCRIPT</span>
-              <span>JAVASCRIPT</span>
-              <span>TAILWIND CSS</span>
-              <span>MATERIAL UI</span>
-              <span>ANT DESIGN</span>
-              <span>FRAMER MOTION</span>
-              <span>REDUX TOOLKIT</span>
-              <span>REACT QUERY</span>
-              <span>NESTJS</span>
-              <span>PRISMA</span>
-            </div>
           </motion.div>
         </div>
       </div>
@@ -212,7 +148,7 @@ const Banner = () => {
           <motion.span
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
           >
             HEY, I&apos;M{" "}
           </motion.span>
@@ -221,8 +157,8 @@ const Banner = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              duration: 0.6,
-              delay: 0.6,
+              duration: 0.5,
+              delay: 0.2,
               ease: [0.25, 0.46, 0.45, 0.94],
             }}
             whileHover={{
@@ -235,7 +171,7 @@ const Banner = () => {
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
           >
             FULL-STACK DEVELOPER
           </motion.span>
@@ -246,7 +182,7 @@ const Banner = () => {
             className="text-gray-300 text-lg md:text-xl font-medium inline-block"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
+            transition={{ duration: 0.5, delay: 0.35 }}
           >
             FRONTEND • BACKEND • FULL-STACK
           </motion.span>
@@ -262,49 +198,16 @@ const Banner = () => {
             whileTap={{ scale: 0.98 }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
             <FaPlay className="text-sm" />
             See My Portfolio
           </motion.a>
         </motion.div>
-
-        {/* Scroll Indicator */}
-        {/* <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.5, duration: 0.6 }}
-        >
-          <motion.div
-            className="flex flex-col items-center text-gray-400 cursor-pointer group"
-            whileHover={{ scale: 1.05 }}
-          >
-            <motion.span
-              className="text-xs mb-3 tracking-widest uppercase"
-              animate={{ opacity: [0.5, 1, 0.5] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            >
-              Scroll Down
-            </motion.span>
-            <motion.div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center group-hover:border-mint-400 transition-colors duration-300">
-              <motion.div
-                className="w-1 h-3 bg-gray-400 rounded-full mt-2 group-hover:bg-mint-400 transition-colors duration-300"
-                animate={{
-                  y: [0, 12, 0],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-            </motion.div>
-          </motion.div>
-        </motion.div> */}
       </motion.div>
     </section>
   );
 };
 
 export default Banner;
+
