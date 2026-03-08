@@ -246,15 +246,10 @@ const Contact = () => {
                     className="contactInput"
                   >
                     <option value="">Select subject</option>
-                    <option value="website">Website Development</option>
-                    <option value="web-app">Web Application</option>
-                    <option value="ecommerce">E-commerce Store</option>
-                    <option value="mobile-app">Mobile App</option>
+                    <option value="saas-mvp">SaaS MVP Development</option>
+                    <option value="ai-integration">AI Integration / LLMs</option>
+                    <option value="backend-arch">Backend Architecture / Scaling</option>
                     <option value="consultation">Technical Consultation</option>
-                    <option value="maintenance">Project Maintenance</option>
-                    <option value="collaboration">
-                      Collaboration Opportunity
-                    </option>
                     <option value="other">Other</option>
                   </select>
 
@@ -338,11 +333,10 @@ const Contact = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className={`p-4 rounded-lg text-sm ${
-                    submitStatus.type === "success"
+                  className={`p-4 rounded-lg text-sm ${submitStatus.type === "success"
                       ? "bg-green-500/20 text-green-400 border border-green-500/30"
                       : "bg-red-500/20 text-red-400 border border-red-500/30"
-                  }`}
+                    }`}
                 >
                   {submitStatus.message}
                 </motion.div>
@@ -353,9 +347,8 @@ const Contact = () => {
                 disabled={isSubmitting}
                 whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
                 whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
-                className={`btn-primary w-full flex items-center justify-center gap-3 ${
-                  isSubmitting ? "opacity-50 cursor-not-allowed" : ""
-                }`}
+                className={`btn-primary w-full flex items-center justify-center gap-3 ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
                 {!isSubmitting && <FaArrowRight className="text-sm" />}

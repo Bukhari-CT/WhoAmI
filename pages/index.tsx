@@ -10,9 +10,6 @@ import dynamic from "next/dynamic";
 // Lazy load components that aren't immediately visible
 const About = dynamic(() => import("@/components/About"), { ssr: true });
 const Skills = dynamic(() => import("@/components/Skills"), { ssr: true });
-const Certifications = dynamic(() => import("@/components/Certifications"), {
-  ssr: true,
-});
 const Experience = dynamic(() => import("@/components/Experience"), {
   ssr: true,
 });
@@ -53,12 +50,11 @@ export default function Home() {
           <div className="w-full">
             <Banner />
             <About />
-            <Skills />
-            <Certifications />
-            <Experience />
-            <Services />
             <Projects />
             <Archive />
+            <Services />
+            <Experience />
+            <Skills />
             <Meeting />
             <Contact />
             <Footer />

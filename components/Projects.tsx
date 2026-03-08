@@ -1,4 +1,4 @@
-import { cafezupas, urgentcare } from "@/public/assets";
+import { cafezupas, urgentcare, estatable } from "@/public/assets";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -40,7 +40,7 @@ const Projects = () => {
       category: "DEVELOPMENT",
       description:
         "Real estate investment analysis platform with AI-powered property research and comprehensive financial metrics.",
-      image: urgentcare,
+      image: estatable,
       link: "#",
       github: "https://github.com/Bukhari-CT",
       technologies: [

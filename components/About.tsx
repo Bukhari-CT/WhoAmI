@@ -25,27 +25,28 @@ const About = () => {
 
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                Hello! I&apos;m Faisal Bukhari, a{" "}
-                <span className="text-mint-400">Full-Stack Developer</span> with
-                6+ years of experience building modern, scalable, and
-                high-performance web applications. I specialize in React,
-                Next.js, Python FastAPI, NestJS, and AI-powered solutions.
+                I am a{" "}
+                <span className="text-mint-400">Full-Stack AI Engineer</span>{" "}
+                partnering with SaaS founders and enterprise teams to architect
+                high-performance, AI-driven web applications. With 4+ years
+                of experience specializing in React, Next.js, Node.js (NestJS),
+                and Python (FastAPI), I design scalable microservices and
+                integrate custom LLM workflows to eliminate operational
+                bottlenecks. My core focus is on delivering compelling user
+                experiences, maintainable code, and measurable business outcomes.
               </p>
               <p>
-                From sleek user interfaces to robust backend systems, I help
-                businesses transform ideas into reliable digital products. My
-                expertise spans{" "}
-                <span className="text-mint-400">frontend development</span> with
-                React/Next.js,{" "}
-                <span className="text-mint-400">backend systems</span> with
-                Python FastAPI and NestJS,{" "}
-                <span className="text-mint-400">AI/ML integration</span> with
-                LangChain and OpenAI,{" "}
-                <span className="text-mint-400">
-                  microservices architecture
-                </span>
-                , and <span className="text-mint-400">cloud integration</span>{" "}
-                with modern deployment practices.
+                From sleek, premium user interfaces to resilient backend
+                infrastructures, I transform complex ideas into market-ready
+                digital products. My expertise spans{" "}
+                <span className="text-mint-400">frontend excellence</span> with
+                modern React ecosystems,{" "}
+                <span className="text-mint-400">backend architecture</span>{" "}
+                featuring FastAPI and NestJS,{" "}
+                <span className="text-mint-400">AI agent integration</span> via
+                LangChain and OpenAI, and seamless{" "}
+                <span className="text-mint-400">cloud deployments</span>{" "}
+                optimized for scale.
               </p>
             </div>
 
@@ -61,7 +62,7 @@ const About = () => {
                 <h4 className="text-mint-400 text-sm font-semibold uppercase tracking-wider mb-2">
                   EXPERIENCE
                 </h4>
-                <p className="text-white">6+ Years Full-Stack</p>
+                <p className="text-white">4+ Years Full-Stack</p>
               </div>
               <div>
                 <h4 className="text-mint-400 text-sm font-semibold uppercase tracking-wider mb-2">
@@ -85,7 +86,7 @@ const About = () => {
                 src={profileImg}
                 alt="Faisal Bukhari"
                 fill
-                loading="lazy"
+                priority
                 className="object-cover rounded-full border-4 border-yellow"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-full"></div>
@@ -102,7 +103,7 @@ const About = () => {
           className="grid md:grid-cols-3 gap-8 mt-20"
         >
           {[
-            { number: "6+", label: "YEARS OF EXPERIENCE" },
+            { number: "4+", label: "YEARS OF EXPERIENCE" },
             { number: "50+", label: "PROJECTS COMPLETED" },
             { number: "30+", label: "HAPPY CLIENTS" },
           ].map((stat, index) => (
